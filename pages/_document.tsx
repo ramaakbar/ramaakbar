@@ -1,6 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import { useEffect } from 'react';
-import useTheme from '../src/hooks/useTheme';
 
 export default function Document() {
   return (
