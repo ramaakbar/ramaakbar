@@ -1,10 +1,10 @@
 ### Hi there 👋
 
-#### Im a passionate Software Engineer
+<!-- #### Im a passionate Software Engineer
 
 <img align="left" width="47%" src="https://github-readme-stats.vercel.app/api?username=ramaakbar&show_icons=true&theme=buefy"/>
 
-<img align="left" width="47%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ramaakbar&layout=compact"/>
+<img align="left" width="47%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ramaakbar&layout=compact"/> -->
 
 <!--
 **ramaakbar/ramaakbar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
