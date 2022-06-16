@@ -4,7 +4,6 @@ import Navbar from 'src/components/navbar';
 import me from 'public/images/Ghn.jpg';
 import Bottombar from 'src/components/bottombar';
 import LinkText from 'src/components/linkText';
-import Timeline from 'src/components/timeline';
 
 const Home: NextPage = () => {
   return (
@@ -17,11 +16,14 @@ const Home: NextPage = () => {
               Akbar Ramadhan Yusri
             </h1>
 
-            <div>
-              I{"'"}m a software engineer, computer science student. Focusing on
-              website development, Frontend and Backend. Currently building
-              websites using react/nextjs.
-            </div>
+            <p>
+              Hello! I{"'"}m Rama, a passionate software engineer, computer
+              science student. Focusing on web development, both Frontend and
+              Backend.
+            </p>
+            <p>
+              On my free time, i love to play games, code, and watch series.
+            </p>
             <div className='mt-5 flex gap-4'>
               <LinkText
                 link='https://github.com/ramaakbar'
@@ -37,7 +39,7 @@ const Home: NextPage = () => {
               />
             </div>
           </article>
-          <div className='flex h-40 w-40 items-center sm:h-40 sm:w-72'>
+          <div className='flex h-40 w-40 items-center sm:h-40 sm:w-80'>
             <Image
               src={me}
               alt='Me'
@@ -47,10 +49,6 @@ const Home: NextPage = () => {
               placeholder='blur'
             />
           </div>
-        </section>
-        <section className='mx-auto mt-10 mb-4 w-full max-w-3xl '>
-          <h2 className='mb-4 text-2xl font-semibold'>Career</h2>
-          <Timeline />
         </section>
       </main>
       <Bottombar />

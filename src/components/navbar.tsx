@@ -17,6 +17,11 @@ export default function Navbar() {
               Projects
             </a>
           </Link>
+          <Link href={'/experience'}>
+            <a className='py-2 px-3 text-neutral-500 transition-colors ease-in hover:text-black dark:hover:text-neutral-100 '>
+              Experiences
+            </a>
+          </Link>
           <ButtonTheme />
         </div>
       </nav>

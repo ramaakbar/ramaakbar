@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Bottombar from 'src/components/bottombar';
 import Navbar from 'src/components/navbar';
 
@@ -7,10 +8,10 @@ export default function Projects() {
     <div className='flex min-h-screen flex-col'>
       <Navbar />
       <main className='mt-10 flex-1 px-4'>
-        <section className=' mx-auto mt-8 mb-4 flex w-full max-w-3xl flex-col gap-4'>
+        <section className=' mx-auto mt-8 mb-4 flex w-full max-w-3xl flex-col gap-6'>
           <h2 className='text-2xl font-semibold'>Projects</h2>
           <div className='relative'>
-            <div className='absolute inset-y-0 left-0 flex items-center pl-3'>
+            <div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
               <svg
                 className='absolute h-5 w-5 text-neutral-400'
                 viewBox='0 0 20 20'
@@ -31,58 +32,27 @@ export default function Projects() {
           </div>
 
           <div className='grid grid-cols-1  gap-3 sm:grid-cols-2'>
-            <div className='h-full w-full '>
-              <Image
-                src={'/images/projectss1.png'}
-                layout='responsive'
-                height='100%'
-                width='100%'
-                objectFit='cover'
-                alt='test'
-                className='rounded-lg'
-              />
-              test
-              <Image
-                src={'/images/projectss1.png'}
-                layout='responsive'
-                height='100%'
-                width='100%'
-                objectFit='cover'
-                alt='test'
-                className='rounded-lg'
-              />
-              test
-              <Image
-                src={'/images/projectss1.png'}
-                layout='responsive'
-                height='100%'
-                width='100%'
-                objectFit='cover'
-                alt='test'
-                className='rounded-lg'
-              />
-              test
-              <Image
-                src={'/images/projectss1.png'}
-                layout='responsive'
-                height='100%'
-                width='100%'
-                objectFit='cover'
-                alt='test'
-                className='rounded-lg'
-              />
-              test
-              <Image
-                src={'/images/projectss1.png'}
-                layout='responsive'
-                height='100%'
-                width='100%'
-                objectFit='cover'
-                alt='test'
-                className='rounded-lg'
-              />
-              test
-            </div>
+            <Link href={'https://ramaakbar-rts-fnapp.netlify.app/'}>
+              <a className='flex flex-col  gap-3 rounded-lg'>
+                <div className='peer relative h-72 w-full  sm:h-60'>
+                  <Image
+                    src={'/images/project2.png'}
+                    layout='fill'
+                    alt='test'
+                    className='rounded-lg'
+                  />
+                </div>
+
+                <a className='text-lg font-bold decoration-sky-500 decoration-2 peer-hover:underline'>
+                  Rts site
+                </a>
+                <div className='flex gap-2'>
+                  <div className='semi-bold inline rounded-full bg-neutral-700 px-2 py-1 text-neutral-400'>
+                    React Js
+                  </div>
+                </div>
+              </a>
+            </Link>
           </div>
         </section>
       </main>
