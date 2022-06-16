@@ -12,7 +12,7 @@ export default function Projects() {
           <div className='relative'>
             <div className='absolute inset-y-0 left-0 flex items-center pl-3'>
               <svg
-                className='absolute h-5 w-5 text-slate-400'
+                className='absolute h-5 w-5 text-neutral-400'
                 viewBox='0 0 20 20'
                 fill='currentColor'
               >

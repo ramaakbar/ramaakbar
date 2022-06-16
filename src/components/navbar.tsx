@@ -1,3 +1,4 @@
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -5,31 +6,17 @@ import { MdOutlineWbSunny } from 'react-icons/md';
 import { TbMoon } from 'react-icons/tb';
 
 export default function Navbar() {
-  const [theme, setTheme] = useState('light');
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
   const router = useRouter();
 
   useEffect(() => {
-    setTheme(localStorage.getItem('theme') === 'light' ? 'light' : 'dark');
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-      document.documentElement.style.colorScheme = 'dark';
-    } else {
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
-      document.documentElement.style.colorScheme = 'light';
-    }
-  }, [theme]);
+    setMounted(true);
+  }, []);
 
-  const handleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      setTheme('light');
-      localStorage.setItem('theme', 'light');
-    }
-  };
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className='border-b bg-white/30  px-4  backdrop-blur-lg dark:border-neutral-800 dark:bg-neutral-900/30'>
@@ -48,8 +35,8 @@ export default function Navbar() {
           </Link>
 
           <button
-            className='flex items-center rounded-lg  py-2 px-3  hover:bg-gray-200 dark:hover:bg-neutral-700'
-            onClick={handleTheme}
+            className='flex items-center rounded-lg  py-2 px-3  transition-all ease-in hover:bg-gray-200 dark:hover:bg-neutral-700'
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
           >
             {theme === 'dark' ? <TbMoon /> : <MdOutlineWbSunny />}
           </button>
