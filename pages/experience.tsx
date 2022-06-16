@@ -1,3 +1,4 @@
+import Bottombar from 'src/components/bottombar';
 import Navbar from 'src/components/navbar';
 import Timeline from 'src/components/timeline';
 
@@ -11,6 +12,7 @@ export default function Experience() {
           <Timeline />
         </section>
       </main>
+      <Bottombar />
     </div>
   );
 }
