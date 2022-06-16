@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import 'styles/globals.css';
 import type { AppProps } from 'next/app';
 import { NextSeo } from 'next-seo';
 
@@ -7,11 +7,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <NextSeo
         title='Ramaakbar'
-        description='Rama akbars personal website portfolio'
+        description='Rama akbar personal website portfolio'
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'Rama, akbars, personal, website, portfolio',
+            content:
+              'Rama, akbar,ramaakbar, akbar ramadhan, personal, website, portfolio',
           },
         ]}
         twitter={{

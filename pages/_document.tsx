@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
       <Head />
       <meta name='theme-color' content='#fafafa' />
-      <body className='  bg-white font-sans text-black antialiased transition-all duration-500 dark:bg-neutral-900 dark:text-white'>
+      <body className='bg-white font-sans text-black antialiased  dark:bg-neutral-900 dark:text-white'>
         <Main />
         <NextScript />
       </body>
