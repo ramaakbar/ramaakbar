@@ -42,6 +42,46 @@ export default function Projects() {
                 className='rounded-lg'
               />
               test
+              <Image
+                src={'/images/projectss1.png'}
+                layout='responsive'
+                height='100%'
+                width='100%'
+                objectFit='cover'
+                alt='test'
+                className='rounded-lg'
+              />
+              test
+              <Image
+                src={'/images/projectss1.png'}
+                layout='responsive'
+                height='100%'
+                width='100%'
+                objectFit='cover'
+                alt='test'
+                className='rounded-lg'
+              />
+              test
+              <Image
+                src={'/images/projectss1.png'}
+                layout='responsive'
+                height='100%'
+                width='100%'
+                objectFit='cover'
+                alt='test'
+                className='rounded-lg'
+              />
+              test
+              <Image
+                src={'/images/projectss1.png'}
+                layout='responsive'
+                height='100%'
+                width='100%'
+                objectFit='cover'
+                alt='test'
+                className='rounded-lg'
+              />
+              test
             </div>
           </div>
         </section>
