@@ -24,11 +24,11 @@ export default function Projects() {
                 />
               </svg>
             </div>
-            <input
+            {/* <input
               type='text'
               className='w-full rounded-lg bg-neutral-100 px-4 py-2 pl-10 dark:bg-neutral-800'
               placeholder='Search'
-            />
+            /> */}
           </div>
 
           <div className='grid grid-cols-1  gap-3 sm:grid-cols-2'>
