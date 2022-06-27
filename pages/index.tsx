@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import Navbar from 'src/components/navbar';
+import Navbar from '@/components/navbar';
 import me from 'public/images/Ghn.jpg';
-import Bottombar from 'src/components/bottombar';
-import LinkText from 'src/components/linkText';
+import Bottombar from '@/components/bottombar';
+import LinkText from '@/components/linkText';
 
 const Home: NextPage = () => {
   return (

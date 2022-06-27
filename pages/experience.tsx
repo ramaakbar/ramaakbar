@@ -1,6 +1,6 @@
-import Bottombar from 'src/components/bottombar';
-import Navbar from 'src/components/navbar';
-import Timeline from 'src/components/timeline';
+import Bottombar from '@/components/bottombar';
+import Navbar from '@/components/navbar';
+import Timeline from '@/components/timeline';
 
 export default function Experience() {
   return (

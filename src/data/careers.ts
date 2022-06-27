@@ -1,4 +1,4 @@
-import { TCareer } from 'src/types';
+import { TCareer } from '@/types';
 
 export const careers: TCareer[] = [
   {

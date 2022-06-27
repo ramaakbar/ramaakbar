@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ButtonTheme from './buttonTheme';
+import ButtonTheme from '@/components/buttonTheme';
 
 export default function Navbar() {
   return (

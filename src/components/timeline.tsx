@@ -1,4 +1,4 @@
-import { careers } from 'src/data/careers';
+import { careers } from '@/data/careers';
 
 export default function Timeline() {
   return (

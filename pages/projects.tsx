@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Bottombar from 'src/components/bottombar';
-import Navbar from 'src/components/navbar';
+import Bottombar from '@/components/bottombar';
+import Navbar from '@/components/navbar';
 
 export default function Projects() {
   return (
@@ -10,7 +10,7 @@ export default function Projects() {
       <main className='mt-10 flex-1 px-4'>
         <section className=' mx-auto mt-8 mb-4 flex w-full max-w-3xl flex-col gap-6'>
           <h2 className='text-2xl font-semibold'>Projects</h2>
-          <div className='relative'>
+          {/* <div className='relative'>
             <div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
               <svg
                 className='absolute h-5 w-5 text-neutral-400'
@@ -24,12 +24,12 @@ export default function Projects() {
                 />
               </svg>
             </div>
-            {/* <input
+            <input
               type='text'
               className='w-full rounded-lg bg-neutral-100 px-4 py-2 pl-10 dark:bg-neutral-800'
               placeholder='Search'
-            /> */}
-          </div>
+            />
+          </div> */}
 
           <div className='grid grid-cols-1  gap-3 sm:grid-cols-2'>
             <Link href={'https://ramaakbar-rts-fnapp.netlify.app/'}>

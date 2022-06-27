@@ -1,4 +1,4 @@
-import { TProject } from 'src/types';
+import { TProject } from '@/types';
 
 const projects: TProject[] = [
   // {
