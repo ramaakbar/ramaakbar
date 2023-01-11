@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Navbar from '@/components/navbar';
-import me from 'public/images/Ghn.jpg';
+import me from '../public/images/Ghn.jpg';
 import Bottombar from '@/components/bottombar';
 import LinkText from '@/components/linkText';
 
