@@ -22,9 +22,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           cardType: 'summary_large_image',
         }}
       />
-      <ThemeProvider attribute='class'>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      {/* <ThemeProvider attribute='class'> */}
+      <Component {...pageProps} />
+      {/* </ThemeProvider> */}
     </>
   );
 }

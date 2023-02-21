@@ -45,7 +45,7 @@ const Home: NextPage = () => {
               alt='Me'
               // width={100}
               // height={100}
-              className='  rounded-full'
+              className='rounded-full'
               placeholder='blur'
             />
           </div>

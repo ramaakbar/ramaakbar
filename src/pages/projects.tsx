@@ -32,26 +32,27 @@ export default function Projects() {
           </div> */}
 
           <div className='grid grid-cols-1  gap-3 sm:grid-cols-2'>
-            <Link href={'https://ramaakbar-rts-fnapp.netlify.app/'}>
-              <a className='flex flex-col  gap-3 rounded-lg'>
-                <div className='peer relative h-72 w-full  sm:h-60'>
-                  <Image
-                    src={'/images/project2.png'}
-                    layout='fill'
-                    alt='test'
-                    className='rounded-lg'
-                  />
-                </div>
+            <Link
+              href={'https://ramaakbar-rts-fnapp.netlify.app/'}
+              className='flex flex-col  gap-3 rounded-lg'
+            >
+              <div className='peer relative h-72 w-full  sm:h-60'>
+                <Image
+                  src={'/images/project2.png'}
+                  layout='fill'
+                  alt='test'
+                  className='rounded-lg'
+                />
+              </div>
 
-                <a className='text-lg font-bold decoration-sky-500 decoration-2 peer-hover:underline'>
-                  Rts site
-                </a>
-                <div className='flex gap-2'>
-                  <div className='semi-bold inline rounded-full bg-neutral-700 px-2 py-1 text-neutral-400'>
-                    React Js
-                  </div>
+              <div className='text-lg font-bold decoration-sky-500 decoration-2 peer-hover:underline'>
+                Rts site
+              </div>
+              <div className='flex gap-2'>
+                <div className='semi-bold inline rounded-full bg-neutral-700 px-2 py-1 text-neutral-400'>
+                  React Js
                 </div>
-              </a>
+              </div>
             </Link>
           </div>
         </section>

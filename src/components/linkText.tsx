@@ -15,22 +15,20 @@ export default function LinkText({
 }: LinkTypeProp) {
   if (type === 'bg') {
     return (
-      <Link href={link}>
-        <a
-          className={`rounded-lg py-2 px-3 font-bold ${color}  no-underline transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-800`}
-        >
-          {text} {'->'}
-        </a>
+      <Link
+        href={link}
+        className={`rounded-lg py-2 px-3 font-bold ${color}  no-underline transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-800`}
+      >
+        {text} {'->'}
       </Link>
     );
   } else {
     return (
-      <Link href={link}>
-        <a
-          className={`rounded-lg py-2 px-3 font-bold text-sky-500  no-underline transition-all duration-300 hover:text-sky-600 dark:hover:text-sky-400  `}
-        >
-          {text} {'->'}
-        </a>
+      <Link
+        href={link}
+        className={`rounded-lg py-2 px-3 font-bold text-sky-500  no-underline transition-all duration-300 hover:text-sky-600 dark:hover:text-sky-400`}
+      >
+        {text} {'->'}
       </Link>
     );
   }
