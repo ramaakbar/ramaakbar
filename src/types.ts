@@ -1,13 +1,11 @@
-export type TCareer = {
-  title: string;
-  company: string;
-  date: string;
-};
-
-export type TProject = {
-  title: string;
-  tech: string[];
-  src: string;
+export type TRepo = {
+  owner: string;
+  repo: string;
   link: string;
-  desc?: string;
+  description: string;
+  image: string;
+  language: string;
+  languageColor: string;
+  stars: number;
+  forks: number;
 };

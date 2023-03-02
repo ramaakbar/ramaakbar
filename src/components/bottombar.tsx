@@ -1,7 +1,12 @@
+import ButtonTheme from "./buttonTheme";
+
 export default function Bottombar() {
   return (
-    <footer className='mx-auto  w-full max-w-4xl  py-7 text-center text-sm text-neutral-600 dark:text-neutral-400'>
-      © <span className='text-sky-500'>2022</span> Akbar Ramadhan Yusri
+    <footer className="border-t border-neutral-100 px-5 py-7 text-center text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+      <div className="mx-auto flex w-full max-w-3xl justify-between ">
+        <div>©2022. Made by Ramaakbar</div>
+        <ButtonTheme />
+      </div>
     </footer>
   );
 }

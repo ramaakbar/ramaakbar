@@ -1,26 +1,34 @@
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
-import { MdOutlineWbSunny } from 'react-icons/md';
-import { TbMoon } from 'react-icons/tb';
+import { MoonIcon, SunIcon } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ButtonTheme() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setTheme("light");
     setMounted(true);
-  }, []);
+  }, [setTheme]);
 
   if (!mounted) {
     return null;
   }
 
+  const handleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
     <button
-      className='flex items-center rounded-lg  py-2 px-3  transition-all ease-in hover:bg-gray-200 dark:hover:bg-neutral-700'
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      className="text-neutral-500 transition-colors ease-in hover:text-black dark:hover:text-neutral-100"
+      onClick={handleTheme}
     >
-      {theme === 'dark' ? <TbMoon /> : <MdOutlineWbSunny />}
+      {theme === "dark" ? (
+        <MoonIcon className="h-5 w-5" />
+      ) : (
+        <SunIcon className="h-5 w-5" />
+      )}
     </button>
   );
 }

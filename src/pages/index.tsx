@@ -1,59 +1,82 @@
-import type { NextPage } from 'next';
-import Image from 'next/image';
-import Navbar from '@/components/navbar';
-import me from 'public/images/Ghn.jpg';
-import Bottombar from '@/components/bottombar';
-import LinkText from '@/components/linkText';
+import Github from "@/components/icon/github";
+import Linkedin from "@/components/icon/linkedin";
+import Layout from "@/components/layout";
+import Project from "@/components/project";
+import Heading from "@/components/typography/heading";
+import LinkText from "@/components/typography/linktext";
+import Text from "@/components/typography/text";
+import { TRepo } from "@/types";
+import axios from "axios";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 
-const Home: NextPage = () => {
-  return (
-    <div className='flex min-h-screen flex-col'>
-      <Navbar />
-      <main className='mt-12 flex-1 px-4'>
-        <section className='prose mx-auto mt-8 mb-4 flex w-full max-w-3xl flex-col-reverse items-center gap-8 dark:prose-invert sm:flex-row sm:gap-10'>
-          <article className=''>
-            <h1 className='mb-4 text-center sm:text-start'>
-              Akbar Ramadhan Yusri
-            </h1>
-
-            <p>
-              Hello! I{"'"}m Rama, a passionate software engineer, computer
-              science student. Focusing on web development, both Frontend and
-              Backend.
-            </p>
-            <p>
-              On my free time, i love to play games, code, and watch series.
-            </p>
-            <div className='mt-5 flex gap-4'>
-              <LinkText
-                link='https://github.com/ramaakbar'
-                text='Github'
-                type='bg'
-                color='text-neutral-500'
-              />
-              <LinkText
-                link='https://www.linkedin.com/in/akbar-ramadhan-yusri-48a422170'
-                text='Linkedin'
-                type='bg'
-                color='text-blue-500'
-              />
-            </div>
-          </article>
-          <div className='flex h-40 w-40 items-center sm:h-40 sm:w-80'>
-            <Image
-              src={me}
-              alt='Me'
-              // width={100}
-              // height={100}
-              className='rounded-full'
-              placeholder='blur'
-            />
-          </div>
-        </section>
-      </main>
-      <Bottombar />
-    </div>
+export const getStaticProps = (async (context) => {
+  const data = await axios.get(
+    "https://rmitiio-api.ramaakbar.xyz/api/repos/pinned/ramaakbar"
   );
-};
+  const repos: TRepo[] = data.data;
+  return {
+    props: {
+      repos,
+    },
+    revalidate: 21600, // 6 hour
+  };
+}) satisfies GetStaticProps;
 
-export default Home;
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+export default function Home({ repos }: Props) {
+  return (
+    <Layout>
+      <section className="mx-auto max-w-3xl">
+        <Heading type="h1">Akbar Ramadhan Yusri</Heading>
+        <Text>
+          Hello! I{"'"}m Rama, a software engineer, final year computer science
+          student. My proficiency in both frontend and backend technologies
+          using ReactJS and NodeJS.
+        </Text>
+        <Text>
+          Aside from my passion for software development, I have a variety of
+          personal interests. In my free time, I enjoy playing video games,
+          coding personal projects, watching series / animes and read mangas.
+        </Text>
+        <Text>
+          Check out all of my projects on{" "}
+          <LinkText href={"https://github.com/ramaakbar"}>
+            <Github /> Github
+          </LinkText>
+          , Contact me on{" "}
+          <LinkText
+            href={"https://www.linkedin.com/in/akbar-ramadhan-yusri-48a422170"}
+            className="group"
+          >
+            <Linkedin /> Linkedin
+          </LinkText>{" "}
+          , or email me at{" "}
+          <LinkText href={"mailto:akbar.6b@gmail.com"}>
+            akbar.6b@gmail.com
+          </LinkText>
+          .
+        </Text>
+      </section>
+      <section className="mx-auto mb-5 max-w-3xl space-y-2">
+        <Heading type="h3" className="mb-4">
+          Favorite Tech Stack
+        </Heading>
+        <Text>Frontend: ReactJS, NextJS, React Native, Tailwind</Text>
+        <Text>Backend: NodeJS, ExpressJS, NestJS, MySQL</Text>
+        <Text>Other: Docker</Text>
+      </section>
+      <section className="mx-auto mb-5 max-w-3xl">
+        <Heading type="h3" className="mb-3">
+          Projects
+        </Heading>
+
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {repos.map((repo, index) => (
+            <Project repo={repo} key={index} />
+          ))}
+        </div>
+      </section>
+    </Layout>
+  );
+}
