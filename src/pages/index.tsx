@@ -62,9 +62,17 @@ export default function Home({ repos }: Props) {
         <Heading type="h3" className="mb-4">
           Favorite Tech Stack
         </Heading>
-        <Text>Frontend: ReactJS, NextJS, React Native, Tailwind</Text>
-        <Text>Backend: NodeJS, ExpressJS, NestJS, MySQL</Text>
-        <Text>Other: Docker</Text>
+        <Text>
+          <span className="font-medium">Frontend:</span> ReactJS, NextJS, React
+          Native, Tailwind
+        </Text>
+        <Text>
+          <span className="font-medium">Backend:</span> NodeJS, ExpressJS,
+          NestJS, MySQL
+        </Text>
+        <Text>
+          <span className="font-medium">Other:</span> Docker
+        </Text>
       </section>
       <section className="mx-auto mb-5 max-w-3xl">
         <Heading type="h3" className="mb-3">
