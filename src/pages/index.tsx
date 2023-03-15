@@ -5,7 +5,7 @@ import Project from "@/components/project";
 import Heading from "@/components/typography/heading";
 import LinkText from "@/components/typography/linktext";
 import Text from "@/components/typography/text";
-import { TRepo } from "@/types";
+import { reposSchema } from "@/schemas";
 import axios from "axios";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 
@@ -13,12 +13,14 @@ export const getStaticProps = (async (context) => {
   const data = await axios.get(
     "https://rmitiio-api.ramaakbar.xyz/api/repos/pinned/ramaakbar"
   );
-  const repos: TRepo[] = data.data;
+
+  const repos = reposSchema.parse(data.data);
+
   return {
     props: {
       repos,
     },
-    revalidate: 21600, // 6 hour
+    revalidate: 60,
   };
 }) satisfies GetStaticProps;
 
@@ -44,7 +46,7 @@ export default function Home({ repos }: Props) {
           <LinkText href={"https://github.com/ramaakbar"}>
             <Github /> Github
           </LinkText>
-          , Contact me on{" "}
+          , contact me on{" "}
           <LinkText
             href={"https://www.linkedin.com/in/akbar-ramadhan-yusri-48a422170"}
             className="group"
@@ -60,7 +62,7 @@ export default function Home({ repos }: Props) {
       </section>
       <section className="mx-auto mb-5 max-w-3xl space-y-2">
         <Heading type="h3" className="mb-4">
-          Favorite Tech Stack
+          Tech Stack
         </Heading>
         <Text>
           <span className="font-medium">Frontend:</span> ReactJS, NextJS, React

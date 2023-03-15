@@ -1,9 +1,9 @@
-import { TRepo } from "@/types";
+import { RepoType } from "@/schemas";
 import { Star } from "lucide-react";
 import Link from "next/link";
 
 type Props = {
-  repo: TRepo;
+  repo: RepoType;
 };
 
 export default function Project({ repo }: Props) {
