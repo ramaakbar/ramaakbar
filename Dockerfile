@@ -4,6 +4,7 @@ WORKDIR /usr/app
 COPY . .
 
 RUN bun install --frozen-lockfile
+RUN bun run build
 RUN bun run export
 
 FROM nginx:alpine AS runner
